@@ -1,0 +1,40 @@
+// 리모컨
+// –––––––––––––––––––––––––––––––––––––––––––––––––– 
+.remote-control {
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  width: 300px;
+  transform: scale(0.9);
+  transform-origin: bottom right;
+  .switch-wrap {
+    .switch {
+      color: $gray-500;
+      background-color: white;
+      border-color: $border-color;
+      border-right: 0px;
+      &:hover {
+        background-color: $gray-100;
+      }
+    }
+    .switch:first-child {
+      border-radius: $btn-border-radius 0 0 $btn-border-radius;
+    }
+    .switch:nth-child(n+2) {
+      border-radius: 0;
+    }
+    .switch:last-child {
+      border-right: 1px solid $border-color;
+      border-radius: 0 $btn-border-radius $btn-border-radius 0;
+    }
+    .switch.on {
+      border: 1px solid lighten($primary, 35%);
+      font-weight: 500;
+      color: $primary;
+      background-color: lighten($primary, 55%);
+    }
+    .switch.on + .switch {
+      border-left: 0;
+    }
+  }
+}

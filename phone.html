@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>성진이네 핸드폰 목업 이미지 공장</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="핸드폰 목업 이미지 공장">
+    <meta property="og:description" content="편하게 일합시다.">
+    <meta property="og:image" content="https://seongj1n.github.io/template/res/common/img/opengraph-phone.png">
+    <meta property="og:url" content="https://seongj1n.github.io/template/phone">
+    <link rel="stylesheet" type="text/css" href="style/css/style.css">
+  </head>
+  <body class="html-phone d-flex flex-column align-items-center justify-content-center bg-light">
+    <form class="remote-control position-fixed p-4 border rounded bg-white shadow">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+        <label class="custom-file-label text-muted" for="inputGroupFile01">스크린 이미지 ㄱ..</label>
+      </div>
+      <div class="d-flex mt-3">
+        <button class="btn btn-outline-primary w-100" type="button" onclick="resetImg()">위치 리셋</button>
+        <button class="ml-3 btn btn-primary w-100" type="button" onclick="makePng()">이미지 ㄱㄱ</button>
+      </div>
+    </form>
+    <div class="my-5"></div>
+    <div class="phone-container">
+      <div id="phone" class="phone d-flex align-items-center justify-content-center bg-white">
+        <div id="screen" class="screen overflow-hidden">
+          <div class="kakaotalk position-relative">
+            <img class="nav position-absolute" src="res/common/img/kakaotalk-nav.png" alt="카카오톡 Nav">
+            <img class="bottom-bar position-absolute" src="res/common/img/kakaotalk-bottom-bar.png" alt="카카오톡 Bottom bar">
+            <div class="chat-container">
+              <div class="d-flex">
+                <div class="icon-wrap">
+                  <img class="symbol" src="res/common/img/veluga-symbol.png" alt="벨루가 심볼">
+                </div>
+                <div class="chat-wrap">
+                  <span class="pf-name">벨루가 비즈니스</span>
+                  <div class="chat-bubble overflow-hidden bg-white">
+                    <img class="chat-img" src="res/common/img/img-sample.png" alt="알림톡 이미지">
+                    <p class="chat-text">
+                      <신규 공급사 및 상품 입고></br>
+                      - 우리술, 우리와인 오미나라</br>
+                      - 드라마 열풍을 타고 인기! 진달래맥주</br>
+                      - 옴니폴로 브루잉 신상맥주
+                    </p>
+                    <div class="btn-wrap">
+                      <div class="kakaotalk-btn w-100 text-center">보러가기</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/dom-to-image.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    var upload = document.getElementsByTagName('input')[0],
+        screen = document.getElementById('screen');
+
+    upload.onchange = function (e) {
+      e.preventDefault();
+
+      var file = upload.files[0],
+          reader = new FileReader();
+      reader.onload = function (event) {
+        var img = new Image();
+        img.src = event.target.result;
+        img.id = 'img';
+        img.style.top = 0;
+        // note: no onload required since we've got the dataurl...I think! :)
+        img.width = 619;
+        screen.innerHTML = '';
+        screen.appendChild(img);
+
+        $('#img').draggable({ axis: "y" });
+      };
+      reader.readAsDataURL(file);
+
+      return false;
+    };
+
+    function makePng(){
+      domtoimage.toPng(document.getElementById('phone'), { width: 680, height: 1270 })
+        .then(function (dataUrl) {
+          var link = document.createElement('a');
+          link.download = 'phone-1.png';
+          link.href = dataUrl;
+          link.click();
+        });
+    } 
+    
+    function resetImg(){
+      document.getElementById('img').style.top = '0px';
+    }
+  </script>
+</html>

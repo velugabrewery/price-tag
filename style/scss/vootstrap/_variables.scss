@@ -1,0 +1,198 @@
+// Color system
+//
+$white: #fff;
+$gray-000: #f8f9fa;
+$gray-100: #f1f4f5;
+$gray-200: #e9edef;
+$gray-300: #dee4e6;
+$gray-400: #ced7da;
+$gray-500: #adb8bd;
+$gray-600: #869196;
+$gray-700: #495357;
+$gray-800: #343d40;
+$gray-900: #212729;
+$black:    #000;
+
+$grays: ();
+$grays: map-merge(
+  (
+    "000": $gray-000,
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue:    #4dabf7;
+$red:     #fa5252;
+$yellow:  #ffd43b;
+$green:   #4c6844;
+$cyan:    #3bc9db;
+
+$primary:       #4c6844;
+$secondary:     #f6f2ed;
+$success:       $primary;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-000;
+$dark:          $gray-800;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "blue":       $blue
+  ),
+  $theme-colors
+);
+$theme-color-interval:      6%;
+
+// Spacing
+//
+$spacer: .875rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .7),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2)
+  ),
+  $spacers
+);
+
+// Components
+//
+$border-color:                $gray-300;
+$border-radius:               .375rem;
+$caret-width:                 .4em;
+$caret-transition:            background .15s ease-in-out;
+
+$box-shadow-sm:               0 4px  4px  rgba(0, 23, 80, .02),
+                              0 1px  6px  rgba(0, 23, 80, .03),
+                              0 8px  8px  rgba(0, 23, 80, .024),
+                              0 16px 16px rgba(0, 23, 80, .024),
+                              8px 32px 32px rgba(0, 23, 80, .036),
+                              8px 64px 64px rgba(0, 23, 80, .036);
+$box-shadow:                  0 4px  4px  rgba(0, 23, 80, .01),
+                              0 1px  6px  rgba(0, 23, 80, .015),
+                              0 8px  8px  rgba(0, 23, 80, .012),
+                              0 16px 16px rgba(0, 23, 80, .012),
+                              8px 32px 32px rgba(0, 23, 80, .018),
+                              8px 64px 64px rgba(0, 23, 80, .018);
+
+// Typography
+//
+$font-family-sans-serif:      -apple-system, "Noto Sans KR", BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-size-base:              .875rem;
+$font-weight-light:           400;
+$small-font-size:             90%;
+$text-muted:                  $gray-500;
+$text-dark-muted:             $gray-600;
+$h1-font-size:                2rem;
+
+// Tables
+//
+$table-dark-bg:               $gray-800;
+$table-dark-color:            $white;
+
+// Buttons + Forms
+//
+$input-btn-padding-y:         .6125rem;
+$input-btn-padding-x:         .875rem;
+$input-btn-padding-x-lg:      1.125rem;
+
+// Forms
+//
+$input-bg:                              $white;
+$input-disabled-bg:                     $gray-100;
+$input-border-color:                    $border-color;
+$input-placeholder-color:               $gray-500;
+$input-group-addon-bg:                  $gray-100;
+
+$custom-control-gutter:                 .5rem;
+$custom-control-indicator-size:         1.1rem;
+$custom-control-indicator-bg:           $input-bg;
+
+// Navs
+//
+$nav-link-padding-y:                .6rem;
+$nav-link-padding-x:                1.25rem;
+$nav-link-disabled-color:           $gray-500;
+
+// Navbar
+//
+$navbar-padding-x:                  $spacer * 1.25;
+$navbar-brand-font-size:            $font-size-base * 1.05;
+
+// Dropdowns
+//
+$dropdown-item-padding-x:           1.125rem;
+
+// Pagination
+//
+$pagination-disabled-color:         $gray-400;
+
+// Cards
+//
+$card-spacer-y:                     1rem;
+
+// Badges
+//
+$badge-font-weight:                 500;
+
+// Modals
+//
+$modal-header-border-color:         $border-color;
+
+// Alerts
+//
+$alert-padding-y:                   .875rem;
+
+// List group
+//
+$list-group-border-color:           $border-color;
+$list-group-disabled-color:         $gray-500;
+
+// Breadcrumbs
+//
+$breadcrumb-bg:                     $gray-000;
+$breadcrumb-divider-color:          $gray-500;
+$breadcrumb-active-color:           $gray-700;
+
+// Carousel
+//
+$carousel-control-width:             12.5%;
+$carousel-indicator-width:           25px;
+$carousel-control-icon-width:        25px;
+$carousel-control-transition:        opacity .15s ease;
+$carousel-indicator-transition:      opacity .6s ease;
+
+// Close
+//
+$close-font-weight:                 $font-weight-light;
+
+// Sidebar
+//
+$sidebar-width:                     240px;
+
+// Max-width
+//
+$max-width-md:                      720px;

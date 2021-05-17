@@ -1,0 +1,11 @@
+// 블로그용 썸네일
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.blog-thumbnail {
+  z-index: 3;
+  width: 960px;
+  height: 960px;
+  .img-wrap {
+    height: 100%;
+    background-color: $secondary;
+  }
+}
