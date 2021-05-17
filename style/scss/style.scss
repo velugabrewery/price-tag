@@ -1,6 +1,98 @@
-@import 'ingredients';
-@import 'vootstrap';
-@import 'utilities';
-@import 'components';
-@import 'overrides';
-@import 'pages';
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans CJK KR DemiLight'), local('NotoSansCJKkr-DemiLight'),
+  url(../fonts/NotoSans-DemiLight.eot),
+  url(../fonts/NotoSans-DemiLight.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/NotoSans-DemiLight.woff) format('woff'),
+  url(../fonts/NotoSans-DemiLight.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Noto Sans CJK KR Regular'), local('NotoSansCJKkr-Regular'),
+  url(../fonts/NotoSans-Regular.eot),
+  url(../fonts/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/NotoSans-Regular.woff) format('woff'),
+  url(../fonts/NotoSans-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Noto Sans CJK KR Medium'), local('NotoSansCJKkr-Medium'),
+  url(../fonts/NotoSans-Medium.eot),
+  url(../fonts/NotoSans-Medium.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/NotoSans-Medium.woff) format('woff'),
+  url(../fonts/NotoSans-Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans CJK KR Bold'), local('NotoSansCJKkr-Bold'),
+  url(../fonts/NotoSans-Bold.eot),
+  url(../fonts/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/NotoSans-Bold.woff) format('woff'),
+  url(../fonts/NotoSans-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Noto Sans CJK KR Black'), local('NotoSansCJKkr-Black'),
+  url(../fonts/NotoSans-Black.eot),
+  url(../fonts/NotoSans-Black.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/NotoSans-Black.woff) format('woff'),
+  url(../fonts/NotoSans-Black.woff2) format('woff2');
+}
+
+// Body
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+*, body {
+  font-family: 'Noto Sans KR', -apple-system, sans-serif;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.price-tag {
+  width: 826px;
+  border: 1px solid red;
+  background-color: white;
+  .comment {
+    padding: 60px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    .text {
+      font-weight: 600;
+      font-size: 40px;
+    }
+  }
+  .name-container {
+    padding: 35px 60px 25px;
+    .name {
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 1.3em;
+    }
+  }
+}
