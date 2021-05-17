@@ -1,0 +1,116 @@
+// 오픈그래프
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.opengraph {
+  z-index: 3;
+  width: 1200px;
+  height: 630px;
+  .img-wrap {
+    max-width: 450px;
+    min-width: 450px;
+    background-color: $secondary;
+  }
+  .text-wrap {
+    width: 750px;
+    padding: 0 80px;
+    .drink-name {
+      font-family: "Suisse Int'l", 'Yoon Gothic 700', 'Yoon Gothic 700 80';
+      font-weight: 800;
+      font-size: 55px;
+      letter-spacing: -.03em;
+    }
+    .producer-name {
+      color: $gray-400;
+      font-family: "Suisse Int'l", 'Yoon Gothic 700', 'Yoon Gothic 700 60';
+      font-weight: 600;
+      font-size: 35px;
+    }
+    .og-info {
+      margin-top: 80px;
+      border-top: 2px solid $gray-300;
+      .info-item {
+        min-width: 180px;
+        padding: 35px 20px 0 20px;
+        font-size: 25px;
+        &:before {
+          position: absolute;
+          top: -10px;
+          left: 0;
+          display: inline-block;
+          width: 2px;
+          height: 20px;
+          background-color: $gray-300;
+          content: '';
+        }
+        .info-name {
+          font-family: 'Yoon Gothic 700', 'Yoon Gothic 700 60';
+          font-weight: 600;
+        }
+        .info-data {
+          text-transform: capitalize;
+        }
+      }
+      .info-item:last-child {
+        max-width: 150px;
+        min-width: 150px;
+        &:after {
+          position: absolute;
+          top: -10px;
+          right: 0;
+          display: inline-block;
+          width: 2px;
+          height: 20px;
+          background-color: $gray-300;
+          content: '';
+        }
+      }
+    }
+    table {
+      margin-top: 80px;
+      border-top: 2px solid $gray-300;
+      tr {
+        td {
+          position: relative;
+          padding: 35px 0 0 20px;
+          font-size: 27px;
+          color: $gray-600;
+          &:before {
+              position: absolute;
+              top: -10px;
+              left: 0;
+              display: inline-block;
+              width: 2px;
+              height: 20px;
+              background-color: $gray-300;
+              content: '';
+          }
+          small {
+            display: block;
+            width: 100%;
+            font-family: "Suisse Int'l", 'Yoon Gothic 700', 'Yoon Gothic 700 60';
+            font-weight: 600;
+          }
+          span {
+            display: inline-block;
+            margin-top: 28px;
+            color: inherit;
+            text-transform: capitalize;
+          }
+        }
+        td:first-child { min-width: 112px; }
+        td:last-child {
+          max-width: 112px;
+          &:after {
+            position: absolute;
+            top: -10px;
+            right: 0;
+            display: inline-block;
+            width: 2px;
+            height: 20px;
+            background-color: $gray-300;
+            content: '';
+          }
+        }
+      }
+    }
+  }
+}

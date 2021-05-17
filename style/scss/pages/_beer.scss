@@ -1,0 +1,92 @@
+.beer-template-1 {
+  width: 1000px;
+  height: 1000px;
+  .header {
+    height: 230px;
+    padding-left: 70px;
+    background-color: $gray-300;
+    .beer-name {
+      display: inline-block;
+      margin-top: 15px;
+      margin-bottom: 0.25em;
+      line-height: .8em;
+      font-size: 90px;
+      text-transform: capitalize;
+    }
+    .beer-info {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+      list-style: none;
+      .info-item {
+        font-size: 35px;
+        transform: skewX(-10deg);
+        white-space: nowrap;
+        small {
+          display: inline-block;
+          margin-right: 8px;
+          font-family: "Suisse Int'l", 'Yoon Gothic 700', 'Yoon Gothic 700 70';
+          font-weight: 700;
+          font-size: 21px;
+        }
+      }
+      .info-item:first-child { text-transform: capitalize; }
+      .info-item ~ .info-item {
+        margin-left: 50px;
+        &:before {
+          position: absolute;
+          top: 21px;
+          left: -28px;
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 2px;
+          background-color: $gray-900;
+          transform: scaleX(0.5) rotate(45deg);
+          content: '';
+        }
+      }
+    }
+  }
+  .content {
+    height: 770px;
+    .text-wrap {
+      width: 55%;
+      height: 100%;
+      padding: 90px 70px 70px;
+      .producer-name {
+        margin-top: 10px;
+        font-size: 37px;
+        text-transform: capitalize;
+      }
+      .description {
+        margin-top: 40px;
+        font-size: 23px;
+        line-height: 1.7em;
+        text-align: justify;
+        word-break: break-all;
+      }
+      .origin {
+        position: absolute;
+        bottom: 70px;
+        width: calc(100% - 140px);
+        padding-top: 15px;
+        border-top: 1px solid $gray-900;
+        span {
+          font-family: "Suisse Int'l", 'Yoon Gothic 700', 'Yoon Gothic 700 60';
+          font-weight: 600;
+          font-size: 20px;
+          transform: skewX(-10deg);
+        }
+      }
+      hr {
+        margin: 8px 0;
+        border: none;
+      }
+    }
+    .img-wrap {
+      width: 45%;
+      height: 100%;
+    }
+  }
+}
