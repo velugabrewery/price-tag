@@ -46,11 +46,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+.resize {
+  transform: scale(0.5);
+}
+
 .price-tag {
   width: 826px;
   border: 1px solid #ccc;
   background-color: white;
-  transform: scale(0.5);
 }
 .price-tag .comment {
   padding: 45px 60px;

@@ -18,6 +18,7 @@
 
 // onChange
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
+// 일반적인 input
 function textUpdate(obj) {
   var val = obj.value;
   var result = obj.id.substring(5);
@@ -25,6 +26,7 @@ function textUpdate(obj) {
   document.getElementById(result).innerHTML = val;
 }
 
+// 가격과 관련된 input. 가격, 할인율
 function discountUpdate(obj) {
   var val = obj.value;
   var result = obj.id.substring(5);
@@ -37,3 +39,14 @@ function discountUpdate(obj) {
   price = Math.floor(price/100) * 100;
   document.getElementById('price').innerHTML = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+// makeImage
+function makeImage(){
+  domtoimage.toJpeg(document.getElementById('priceTag'), { width: 826 })
+    .then(function (dataUrl) {
+      var link = document.createElement('a');
+      link.download = document.getElementById('inputProductName').value + '.jpeg';
+      link.href = dataUrl;
+      link.click();
+    }); 
+} 
