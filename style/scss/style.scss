@@ -53,7 +53,7 @@
   url(../fonts/NotoSans-Black.woff2) format('woff2');
 }
 
-// Body
+// Typography
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 body {
   display: flex;
@@ -73,12 +73,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+// Components
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
 .price-tag {
   width: 826px;
-  border: 1px solid red;
+  border: 1px solid #ccc;
   background-color: white;
   .comment {
-    padding: 60px;
+    padding: 45px 60px;
     text-align: center;
     color: white;
     background-color: black;
@@ -93,6 +95,109 @@ h1, h2, h3, h4, h5, h6 {
       font-weight: 700;
       font-size: 56px;
       line-height: 1.3em;
+    }
+    .subtext-wrap {
+      margin-top: 25px;
+      .subtext {
+        position: relative;
+        font-weight: 600;
+        font-size: 24px;
+        color: #868E96;
+      }
+      .subtext + .subtext {
+        margin-left: 20px;
+        &:before {
+          position: absolute;
+          top: 8px;
+          left: -13px;
+          display: block;
+          width: 2px;
+          height: 22px;
+          background-color: #868E96;
+          content: '';
+        }
+      }
+    }
+    .subtext-wrap + .subtext-wrap {
+      margin-top: 4px;
+    }
+  }
+  .price-container {
+    padding: 0 60px 25px;
+    .price {
+      font-weight: 600;
+      font-size: 32px;
+      text-decoration:line-through;
+      color: #868E96;
+    }
+    .discount-price-wrap {
+      display: flex;
+      .percent {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1.3em;
+        color: #495057;
+      }
+      .discount-price {
+        margin-left: 15px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1.3em;
+        color: #FF922B;
+      }
+    }
+  }
+  .palette-container {
+    padding: 15px 60px 60px;
+    .text-wrap {
+      display: flex;
+      align-items: center;
+      .icon-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;;
+      }
+      .text {
+        margin-left: 20px;
+        margin-bottom: 4px;
+        font-weight: 600;
+        font-size: 32px;
+      }
+    }
+    .text-wrap + .text-wrap {
+      margin-top: 8px;
+    }
+    .wine-palette {
+      margin-top: 30px;
+      .graph-wrap {
+        display: flex;
+        align-items: center;
+        .title {
+          margin-bottom: 4px;
+          font-weight: 600;
+          font-size: 32px;
+        }
+        .graph {
+          position: relative;
+          flex: 1 1 0;
+          height: 36px;
+          margin-left: 35px;
+          border-radius: 18px;
+          background-color: #eee;
+          .graph-bar {
+            position: absolute;
+            top: 0;
+            width: 20%;
+            height: 36px;
+            border-radius: 18px;
+            background-color: #FF922B;
+          }
+        }
+      }
+      .graph-wrap + .graph-wrap {
+        margin-top: 12px;
+      }
     }
   }
 }

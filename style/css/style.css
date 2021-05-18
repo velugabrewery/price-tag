@@ -48,11 +48,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .price-tag {
   width: 826px;
-  border: 1px solid red;
+  border: 1px solid #ccc;
   background-color: white;
 }
 .price-tag .comment {
-  padding: 60px;
+  padding: 45px 60px;
   text-align: center;
   color: white;
   background-color: black;
@@ -68,6 +68,109 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.3em;
+}
+.price-tag .name-container .subtext-wrap {
+  margin-top: 25px;
+}
+.price-tag .name-container .subtext-wrap .subtext {
+  position: relative;
+  font-weight: 600;
+  font-size: 24px;
+  color: #868E96;
+}
+.price-tag .name-container .subtext-wrap .subtext + .subtext {
+  margin-left: 20px;
+}
+.price-tag .name-container .subtext-wrap .subtext + .subtext:before {
+  position: absolute;
+  top: 8px;
+  left: -13px;
+  display: block;
+  width: 2px;
+  height: 22px;
+  background-color: #868E96;
+  content: "";
+}
+.price-tag .name-container .subtext-wrap + .subtext-wrap {
+  margin-top: 4px;
+}
+.price-tag .price-container {
+  padding: 0 60px 25px;
+}
+.price-tag .price-container .price {
+  font-weight: 600;
+  font-size: 32px;
+  text-decoration: line-through;
+  color: #868E96;
+}
+.price-tag .price-container .discount-price-wrap {
+  display: flex;
+}
+.price-tag .price-container .discount-price-wrap .percent {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.3em;
+  color: #495057;
+}
+.price-tag .price-container .discount-price-wrap .discount-price {
+  margin-left: 15px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.3em;
+  color: #FF922B;
+}
+.price-tag .palette-container {
+  padding: 15px 60px 60px;
+}
+.price-tag .palette-container .text-wrap {
+  display: flex;
+  align-items: center;
+}
+.price-tag .palette-container .text-wrap .icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+}
+.price-tag .palette-container .text-wrap .text {
+  margin-left: 20px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 32px;
+}
+.price-tag .palette-container .text-wrap + .text-wrap {
+  margin-top: 8px;
+}
+.price-tag .palette-container .wine-palette {
+  margin-top: 30px;
+}
+.price-tag .palette-container .wine-palette .graph-wrap {
+  display: flex;
+  align-items: center;
+}
+.price-tag .palette-container .wine-palette .graph-wrap .title {
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 32px;
+}
+.price-tag .palette-container .wine-palette .graph-wrap .graph {
+  position: relative;
+  flex: 1 1 0;
+  height: 36px;
+  margin-left: 35px;
+  border-radius: 18px;
+  background-color: #eee;
+}
+.price-tag .palette-container .wine-palette .graph-wrap .graph .graph-bar {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #FF922B;
+}
+.price-tag .palette-container .wine-palette .graph-wrap + .graph-wrap {
+  margin-top: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
