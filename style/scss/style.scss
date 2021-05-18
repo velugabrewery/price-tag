@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 826px;
   border: 1px solid #ccc;
   background-color: white;
+  transform: scale(0.5);
   .comment {
     padding: 45px 60px;
     text-align: center;
@@ -90,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
   .name-container {
-    padding: 35px 60px 25px;
+    padding: 40px 60px 25px;
     .name {
       font-weight: 700;
       font-size: 56px;
@@ -100,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 25px;
       .subtext {
         position: relative;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 24px;
         color: #868E96;
       }
@@ -137,6 +138,9 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 48px;
         line-height: 1.3em;
         color: #495057;
+        &:after {
+          content: '%';
+        }
       }
       .discount-price {
         margin-left: 15px;
@@ -148,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
   .palette-container {
-    padding: 15px 60px 60px;
+    padding: 15px 60px 55px;
     .text-wrap {
       display: flex;
       align-items: center;
@@ -156,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40px;;
+        width: 40px;
       }
       .text {
         margin-left: 20px;
