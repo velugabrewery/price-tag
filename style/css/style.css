@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
@@ -47,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .resize {
+  margin: 0 calc(826px / -4);
   transform: scale(0.5);
 }
 
@@ -81,6 +83,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: 24px;
   color: #868E96;
+}
+.price-tag .name-container .subtext-wrap .subtext.volume:after {
+  content: "㎖";
 }
 .price-tag .name-container .subtext-wrap .subtext + .subtext {
   margin-left: 20px;
@@ -178,6 +183,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 .price-tag .palette-container .wine-palette .graph-wrap + .graph-wrap {
   margin-top: 12px;
+}
+
+.form-container {
+  width: 400px;
+  padding: 40px 35px;
+  margin-left: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0, 23, 80, 0.02), 0 1px 6px rgba(0, 23, 80, 0.03), 0 8px 8px rgba(0, 23, 80, 0.024), 0 16px 16px rgba(0, 23, 80, 0.024), 8px 32px 32px rgba(0, 23, 80, 0.036), 8px 64px 64px rgba(0, 23, 80, 0.036);
+}
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+}
+.form-container .form .form-item {
+  display: flex;
+  flex-direction: column;
+}
+.form-container .form .form-item .label {
+  font-weight: 700;
+  font-size: 15px;
+}
+.form-container .form .form-item .input {
+  margin-top: 5px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.form-container .form .form-item + .form-item {
+  margin-top: 10px;
+}
+.form-container .form .button {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  background-color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

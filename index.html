@@ -13,55 +13,6 @@
         <link rel="stylesheet" type="text/css" href="style/css/style.css">
     </head>
     <body>
-        <section>
-            <form>
-                <div class="form-item">
-                    <label>상품명</label>
-                    <input class="input" type="text" id="inputProductName" name="product_name" onchange="textUpdate(this)" />
-                </div>
-                <div class="form-item">
-                    <label>스타일</label>
-                    <input class="input" type="text" id="inputStyle" name="style" onchange="textUpdate(this)" />
-                </div>
-                <div class="form-item">
-                    <label>지역</label>
-                    <input class="input" type="text" id="inputOrigin" name="origin" onchange="textUpdate(this)" />
-                </div>
-                <div class="form-item">
-                    <label>베이스</label>
-                    <input class="input" type="text" id="inputBase" name="base" onchange="textUpdate(this)" />
-                </div>
-                <div class="form-item">
-                    <label>용량</label>
-                    <input class="input" type="text" id="inputVolume" name="volume" onchange="textUpdate(this)" />
-                </div>
-                <div class="form-item">
-                    <label>가격</label>
-                    <input class="input" type="text" id="inputDiscountPrice" name="discount-price" onchange="discountUpdate(this)" />
-                </div>
-                <div class="form-item">
-                    <label>할인 퍼센트</label>
-                    <input class="input" type="text" id="inputDiscountPercent" name="discount_percent" onchange="discountUpdate(this)" />
-                </div>
-                <div class="form-item">
-                    <label>색상</label>
-                    <input class="input" type="text" id="inputColor" name="color" onchange="textUpdate(this)" />
-                </div>
-                <div class="form-item">
-                    <label>색상</label>
-                    <input class="input" type="text" id="inputColor" name="color" onchange="textUpdate(this)" />
-                </div>
-                <div class="form-item">
-                    <label>아로마</label>
-                    <input class="input" type="text" id="inputAroma" name="aroma" onchange="textUpdate(this)" />
-                </div>
-                <div class="form-item">
-                    <label>한줄평</label>
-                    <input class="input" type="text" id="inputComment" name="comment" onchange="textUpdate(this)" onchange="textUpdate(this)" />
-                </div>
-                <button class="button" type="button" onclick="makeImage()">이미지 ㄱㄱ</button>
-            </form>
-        </section>
         <div class="resize">
             <section id="priceTag" class="price-tag">
                 <div class="comment">
@@ -75,7 +26,7 @@
                     </div>
                     <div class="subtext-wrap">
                         <span id="base" class="subtext">몬테풀치아노, 카베르네 소비뇽, 템프라니요</span>
-                        <span id="volume" class="subtext">750㎖</span>
+                        <span id="volume" class="subtext volume">750</span>
                     </div>
                 </div>
                 <div class="price-container">
@@ -132,6 +83,55 @@
                 </div>
             </section>
         </div>
+        <section class="form-container">
+            <form class="form">
+                <div class="form-item">
+                    <label class="label">상품명</label>
+                    <input class="input" type="text" id="inputProductName" name="product_name" placeholder="루나리아 코스테 디 모로 몬테풀치아노 디 아부르쪼" onchange="textUpdate(this)" />
+                </div>
+                <div class="form-item">
+                    <label class="label">스타일</label>
+                    <input class="input" type="text" id="inputStyle" name="style" placeholder="레드 와인" onchange="textUpdate(this)" />
+                </div>
+                <div class="form-item">
+                    <label class="label">지역</label>
+                    <input class="input" type="text" id="inputOrigin" name="origin" placeholder="이탈리아, 아브루쪼" onchange="textUpdate(this)" />
+                </div>
+                <div class="form-item">
+                    <label class="label">베이스</label>
+                    <input class="input" type="text" id="inputBase" name="base" placeholder="몬테풀치아노, 카베르네 소비뇽, 템프라니요" onchange="textUpdate(this)" />
+                </div>
+                <div class="form-item">
+                    <label class="label">용량</label>
+                    <input class="input" type="text" id="inputVolume" name="volume" placeholder="750" onchange="textUpdate(this)" />
+                </div>
+                <div class="form-item">
+                    <label class="label">가격</label>
+                    <input class="input" type="text" id="inputDiscountPrice" name="discount-price" placeholder="" onchange="discountUpdate(this)" />
+                </div>
+                <div class="form-item">
+                    <label class="label">할인 퍼센트</label>
+                    <input class="input" type="text" id="inputDiscountPercent" name="discount_percent" placeholder="" onchange="discountUpdate(this)" />
+                </div>
+                <div class="form-item">
+                    <label class="label">색상</label>
+                    <input class="input" type="text" id="inputColor" name="color" placeholder="" onchange="textUpdate(this)" />
+                </div>
+                <div class="form-item">
+                    <label class="label">색상</label>
+                    <input class="input" type="text" id="inputColor" name="color" placeholder="" onchange="textUpdate(this)" />
+                </div>
+                <div class="form-item">
+                    <label class="label">아로마</label>
+                    <input class="input" type="text" id="inputAroma" name="aroma" placeholder="" onchange="textUpdate(this)" />
+                </div>
+                <div class="form-item">
+                    <label class="label">한줄평</label>
+                    <input class="input" type="text" id="inputComment" name="comment" placeholder="" onchange="textUpdate(this)" />
+                </div>
+                <button class="button" type="button" onclick="makeImage()">이미지 ㄱㄱ</button>
+            </form>
+        </section>
     </body>
     <script src="js/dom-to-image.js"></script>
     <script src="js/script.js"></script>
