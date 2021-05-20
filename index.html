@@ -57,29 +57,54 @@
                         <div class="graph-wrap">
                             <span class="title">바디</span>
                             <div class="graph">
-                                <div class="graph-bar"></div>
+                                <div id="body" class="graph-bar"></div>
                             </div>
                         </div>
                         <div class="graph-wrap">
                             <span class="title">타닌</span>
                             <div class="graph">
-                                <div class="graph-bar"></div>
+                                <div id="tannin" class="graph-bar"></div>
                             </div>
                         </div>
                         <div class="graph-wrap">
                             <span class="title">당도</span>
                             <div class="graph">
-                                <div class="graph-bar"></div>
+                                <div id="sugarContent" class="graph-bar"></div>
                             </div>
                         </div>
                         <div class="graph-wrap">
                             <span class="title">산도</span>
                             <div class="graph">
-                                <div class="graph-bar"></div>
+                                <div id="acidity" class="graph-bar"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="balance-container"></div>
+                </div>
+                <div class="balance-container">
+                    <div class="title-wrap">
+                        <span class="title">밸런스</span>
+                        <span class="subtitle">(알코올향)</span>
+                    </div>
+                    <div class="tachometer-container">
+                        <div id="balance" class="arrow">
+                            <div class="circle"></div>
+                            <div class="diamond"></div>
+                            <svg class="select" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 704 704" xml:space="preserve">
+                                <path d="M352,30c34.74,0,68.18,5.52,99.52,15.7l9.28-28.56C426.54,6.01,389.97,0,352,0s-74.54,6.01-108.8,17.14l9.28,28.56   C283.82,35.52,317.26,30,352,30z"/>
+                            </svg>
+                        </div>
+                        <svg class="divider divider-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 704 704" xml:space="preserve">
+                            <path d="M352,30c34.74,0,68.18,5.52,99.52,15.7l9.28-28.56C426.54,6.01,389.97,0,352,0s-74.54,6.01-108.8,17.14l9.28,28.56   C283.82,35.52,317.26,30,352,30z"/>
+                        </svg>
+                        <svg class="divider divider-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 704 704" xml:space="preserve">
+                            <path d="M352,30c34.74,0,68.18,5.52,99.52,15.7l9.28-28.56C426.54,6.01,389.97,0,352,0s-74.54,6.01-108.8,17.14l9.28,28.56   C283.82,35.52,317.26,30,352,30z"/>
+                        </svg>
+                        <div class="text-wrap">
+                            <span class="text">약함</span>
+                            <span class="text">강함</span>
+                        </div>
+                        <div class="graph"></div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -120,6 +145,19 @@
                 <div class="form-item">
                     <label class="label">아로마</label>
                     <input class="input" type="text" id="inputAroma" name="aroma" placeholder="붉은 과일류, 베이비파우더, 바다 모래" onchange="textUpdate(this)" />
+                </div>
+                <div class="form-item">
+                    <label class="label">와인 팔레트</label>
+                    <div class="input-wrap">
+                        <input class="input" type="text" id="inputBody" name="body" placeholder="바디" onchange="graphUpdate(this)" />
+                        <input class="input" type="text" id="inputTannin" name="tannin" placeholder="타닌" onchange="graphUpdate(this)" />
+                        <input class="input" type="text" id="inputSugarContent" name="sugarContent" placeholder="당도" onchange="graphUpdate(this)" />
+                        <input class="input" type="text" id="inputAcidity" name="acidity" placeholder="산도" onchange="graphUpdate(this)" />
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="label">밸런스</label>
+                    <input class="input" type="text" id="inputBalance" name="balance" placeholder="밸런스" onchange="balanceUpdate(this)" />
                 </div>
                 <div class="form-item">
                     <label class="label">한줄평</label>

@@ -40,6 +40,22 @@ function discountUpdate(obj) {
   document.getElementById('price').innerHTML = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+// 그래프
+function graphUpdate(obj) {
+  var val = obj.value;
+  var result = obj.id.substring(5);
+  result = result.charAt(0).toLowerCase() + result.substring(1);
+  document.getElementById(result).style.marginLeft = (val - 1) * 20 + '%';
+}
+
+// 밸런스
+function balanceUpdate(obj) {
+  var val = obj.value;
+  var result = obj.id.substring(5);
+  result = result.charAt(0).toLowerCase() + result.substring(1);
+  document.getElementById(result).style.transform = 'rotate(' + ((val - 1) * 36 - 72) + 'deg)';
+}
+
 // makeImage
 function makeImage(){
   domtoimage.toJpeg(document.getElementById('priceTag'), { width: 826 })

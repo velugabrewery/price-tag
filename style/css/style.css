@@ -41,6 +41,7 @@ body {
   letter-spacing: -0.02em;
   word-break: keep-all;
   -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -132,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #FF922B;
 }
 .price-tag .palette-container {
-  padding: 15px 60px 55px;
+  padding: 15px 60px 20px;
 }
 .price-tag .palette-container .text-wrap {
   display: flex;
@@ -184,6 +185,90 @@ h1, h2, h3, h4, h5, h6 {
 .price-tag .palette-container .wine-palette .graph-wrap + .graph-wrap {
   margin-top: 12px;
 }
+.price-tag .balance-container {
+  padding: 15px 60px 55px;
+}
+.price-tag .balance-container .title-wrap .title {
+  font-weight: 600;
+  font-size: 32px;
+}
+.price-tag .balance-container .title-wrap .subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  color: #868E96;
+}
+.price-tag .balance-container .tachometer-container {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: calc((826px - 70px * 2) / 2);
+  margin-top: 20px;
+}
+.price-tag .balance-container .tachometer-container .arrow {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price-tag .balance-container .tachometer-container .arrow .circle {
+  z-index: 4;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+}
+.price-tag .balance-container .tachometer-container .arrow .diamond {
+  z-index: 3;
+  width: calc(826px - 70px * 2);
+  height: calc(826px - 70px * 2);
+  border: 3px solid white;
+  background-color: #c4c4c4;
+  transform: scale(0.03, 0.7) rotate(45deg);
+}
+.price-tag .balance-container .tachometer-container .arrow .select {
+  z-index: 2;
+  position: absolute;
+}
+.price-tag .balance-container .tachometer-container .arrow .select path {
+  fill: #FF922B;
+}
+.price-tag .balance-container .tachometer-container .divider {
+  z-index: 1;
+  position: absolute;
+  width: calc(826px - 70px * 2);
+  height: calc(826px - 70px * 2);
+}
+.price-tag .balance-container .tachometer-container .divider path {
+  fill: #f1f4f5;
+}
+.price-tag .balance-container .tachometer-container .divider.divider-1 {
+  transform: rotate(-36deg);
+}
+.price-tag .balance-container .tachometer-container .divider.divider-2 {
+  transform: rotate(36deg);
+}
+.price-tag .balance-container .tachometer-container .text-wrap {
+  position: absolute;
+  top: calc((826px - 120px * 2) / 2);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.price-tag .balance-container .tachometer-container .text-wrap .text {
+  margin: 0 60px;
+  font-weight: 600;
+  font-size: 32px;
+  color: #868E96;
+}
+.price-tag .balance-container .tachometer-container .graph {
+  width: calc(826px - 70px * 2);
+  height: calc(826px - 70px * 2);
+  border: 30px solid #DEE4E6;
+  border-radius: 50%;
+}
 
 .form-container {
   width: 400px;
@@ -212,11 +297,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   font-size: 15px;
 }
+.form-container .form .form-item .input-wrap {
+  display: flex;
+}
+.form-container .form .form-item .input-wrap .input {
+  flex: 1 1 0;
+  width: 1px;
+}
+.form-container .form .form-item .input-wrap .input + .input {
+  margin-left: 10px;
+}
 .form-container .form .form-item + .form-item {
   margin-top: 10px;
 }
 .form-container .form .button {
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 12px;
   border: none;
   border-radius: 4px;
