@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px 60px 20px;
 }
 .price-tag .palette-container .text-wrap {
-  display: flex;
+  display: none;
   align-items: center;
 }
 .price-tag .palette-container .text-wrap .icon-wrap {

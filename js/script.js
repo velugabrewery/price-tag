@@ -22,8 +22,34 @@
 function textUpdate(obj) {
   var val = obj.value;
   var result = obj.id.substring(5);
+  var viewInput = 'view' + result;
+
   result = result.charAt(0).toLowerCase() + result.substring(1);
   document.getElementById(result).innerHTML = val;
+  
+  // 값이 없으면 숨김처리 input
+  if (val != '') {
+    document.getElementById(viewInput).style.display = 'flex';
+    document.getElementById(result).innerHTML = val;
+  }
+  else {
+    document.getElementById(viewInput).style.display = 'none';
+  }
+
+  var arr = ['viewColor', 'viewAroma'];
+  var flexNumber = 0;
+  for (i = 0; i < arr.length; i++) {
+    if (document.getElementById(arr[i]).style.display != 'flex') {
+      flexNumber += 1;
+    }
+  }
+  
+  if (flexNumber == 2) {
+    document.getElementById('paletteContainer').style.marginTop = '-50px';
+  }
+  else {
+    document.getElementById('paletteContainer').style.marginTop = '0';
+  }
 }
 
 // 가격과 관련된 input. 가격, 할인율
@@ -45,14 +71,29 @@ function graphUpdate(obj) {
   var val = obj.value;
   console.log(val);
   var result = obj.id.substring(5);
-  var graphResult = 'graph' + result;
+  var viewGraph = 'view' + result;
   result = result.charAt(0).toLowerCase() + result.substring(1);
   if (val > 0) {
-    document.getElementById(graphResult).style.display = 'flex';
+    document.getElementById(viewGraph).style.display = 'flex';
     document.getElementById(result).style.marginLeft = (val - 1) * 20 + '%';
   }
   else {
-    document.getElementById(graphResult).style.display = 'none';
+    document.getElementById(viewGraph).style.display = 'none';
+  }
+
+  var arr = ['viewBody', 'viewTannin', 'viewSugarContent', 'viewAcidity'];
+  var flexNumber = 0;
+  for (i = 0; i < arr.length; i++) {
+    if (document.getElementById(arr[i]).style.display != 'flex') {
+      flexNumber += 1;
+    }
+  }
+  
+  if (flexNumber == 4) {
+    document.getElementById('winePalette').style.marginTop = '20px';
+  }
+  else {
+    document.getElementById('winePalette').style.marginTop = '30px';
   }
 }
 
