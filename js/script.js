@@ -43,9 +43,17 @@ function discountUpdate(obj) {
 // 그래프
 function graphUpdate(obj) {
   var val = obj.value;
+  console.log(val);
   var result = obj.id.substring(5);
+  var graphResult = 'graph' + result;
   result = result.charAt(0).toLowerCase() + result.substring(1);
-  document.getElementById(result).style.marginLeft = (val - 1) * 20 + '%';
+  if (val > 0) {
+    document.getElementById(graphResult).style.display = 'flex';
+    document.getElementById(result).style.marginLeft = (val - 1) * 20 + '%';
+  }
+  else {
+    document.getElementById(graphResult).style.display = 'none';
+  }
 }
 
 // 밸런스
