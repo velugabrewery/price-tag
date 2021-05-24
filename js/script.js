@@ -103,6 +103,13 @@ function balanceUpdate(obj) {
   var result = obj.id.substring(5);
   result = result.charAt(0).toLowerCase() + result.substring(1);
   document.getElementById(result).style.transform = 'rotate(' + ((val - 1) * 36 - 72) + 'deg)';
+
+  if (val != '') {
+    document.getElementById('viewBalance').style.display = 'block';
+  }
+  else {
+    document.getElementById('viewBalance').style.display = 'none';
+  }
 }
 
 // makeImage

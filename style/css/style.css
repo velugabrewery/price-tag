@@ -186,6 +186,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 12px;
 }
 .price-tag .balance-container {
+  display: none;
   padding: 15px 60px 55px;
 }
 .price-tag .balance-container .title-wrap .title {
