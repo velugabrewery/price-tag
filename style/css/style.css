@@ -105,7 +105,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 4px;
 }
 .price-tag .price-container {
-  padding: 0 60px 25px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 50px;
 }
 .price-tag .price-container .price {
   font-weight: 600;

@@ -106,9 +106,11 @@ function balanceUpdate(obj) {
 
   if (val != '') {
     document.getElementById('viewBalance').style.display = 'block';
+    document.getElementById('priceContainer').style.paddingBottom = '25px';
   }
   else {
     document.getElementById('viewBalance').style.display = 'none';
+    document.getElementById('priceContainer').style.paddingBottom = '50px';
   }
 }
 
