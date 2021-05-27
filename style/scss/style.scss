@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
   .price-container {
     padding-left: 60px;
     padding-right: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     .price {
       font-weight: 600;
       font-size: 32px;
@@ -161,10 +161,12 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
   .palette-container {
-    padding: 15px 60px 20px;
+    padding: 10px 60px 0;
+    padding-bottom: 40px;
     .text-wrap {
       display: none;
       align-items: center;
+      margin: 4px 0;
       .icon-wrap {
         display: flex;
         justify-content: center;
@@ -177,9 +179,6 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 600;
         font-size: 32px;
       }
-    }
-    .text-wrap + .text-wrap {
-      margin-top: 8px;
     }
     .wine-palette {
       margin-top: 30px;

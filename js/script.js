@@ -31,9 +31,11 @@ function textUpdate(obj) {
   if (val != '') {
     document.getElementById(viewInput).style.display = 'flex';
     document.getElementById(result).innerHTML = val;
+    document.getElementById('priceContainer').style.paddingBottom = '25px';
   }
   else {
     document.getElementById(viewInput).style.display = 'none';
+    document.getElementById('priceContainer').style.paddingBottom = '50px';
   }
 
   var arr = ['viewColor', 'viewAroma'];
@@ -45,10 +47,12 @@ function textUpdate(obj) {
   }
   
   if (flexNumber == 2) {
-    document.getElementById('paletteContainer').style.marginTop = '-50px';
+    document.getElementById('paletteContainer').style.marginTop = '-30px';
+    document.getElementById('priceContainer').style.paddingBottom = '50px';
   }
   else {
     document.getElementById('paletteContainer').style.marginTop = '0';
+    document.getElementById('priceContainer').style.paddingBottom = '25px';
   }
 }
 
@@ -107,10 +111,12 @@ function balanceUpdate(obj) {
   if (val != '') {
     document.getElementById('viewBalance').style.display = 'block';
     document.getElementById('priceContainer').style.paddingBottom = '25px';
+    document.getElementById('paletteContainer').style.paddingBottom = '25px';
   }
   else {
     document.getElementById('viewBalance').style.display = 'none';
-    document.getElementById('priceContainer').style.paddingBottom = '50px';
+    document.getElementById('priceContainer').style.paddingBottom = '40px';
+    document.getElementById('paletteContainer').style.paddingBottom = '40px';
   }
 }
 

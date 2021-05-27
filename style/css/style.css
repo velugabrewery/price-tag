@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 .price-tag .price-container {
   padding-left: 60px;
   padding-right: 60px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 .price-tag .price-container .price {
   font-weight: 600;
@@ -135,11 +135,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #FF922B;
 }
 .price-tag .palette-container {
-  padding: 15px 60px 20px;
+  padding: 10px 60px 0;
+  padding-bottom: 40px;
 }
 .price-tag .palette-container .text-wrap {
   display: none;
   align-items: center;
+  margin: 4px 0;
 }
 .price-tag .palette-container .text-wrap .icon-wrap {
   display: flex;
@@ -152,9 +154,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 4px;
   font-weight: 600;
   font-size: 32px;
-}
-.price-tag .palette-container .text-wrap + .text-wrap {
-  margin-top: 8px;
 }
 .price-tag .palette-container .wine-palette {
   margin-top: 30px;
