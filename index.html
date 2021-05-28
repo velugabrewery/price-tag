@@ -52,6 +52,23 @@
                         <span id="aroma" class="text">붉은 과일류, 베이비파우더, 바다 모래</span>
                     </div>
                 </div>
+                <div id="viewBalance" class="balance-container">
+                    <span class="title">밸런스</span>
+                    <div class="graph-container">
+                        <span class="description">약함</span>
+                        <div class="graph-wrap">
+                            <div id="balance" class="graph-picker"></div>
+                            <div class="graph">
+                                <div class="graph-bg cell-1"></div>
+                                <div class="graph-bg cell-2"></div>
+                                <div class="graph-bg cell-3"></div>
+                                <div class="graph-bg cell-4"></div>
+                                <div class="graph-bg cell-5"></div>
+                            </div>
+                        </div>
+                        <span class="description">강함</span>
+                    </div>
+                </div>
                 <div id="winePalette" class="wine-palette pt-0">
                     <div id="viewBody" class="graph-wrap">
                         <span class="title">바디</span>
@@ -147,6 +164,10 @@
                     <input class="input" type="text" id="inputAroma" name="aroma" placeholder="붉은 과일류, 베이비파우더, 바다 모래" onchange="textUpdate(this)" />
                 </div>
                 <div class="form-item">
+                    <label class="label">밸런스</label>
+                    <input class="input" type="text" id="inputBalance" name="balance" placeholder="밸런스" onchange="balanceUpdate(this)" />
+                </div>
+                <div class="form-item">
                     <label class="label">와인 팔레트</label>
                     <div class="input-wrap">
                         <input class="input" type="text" id="inputBody" name="body" placeholder="바디" onchange="graphUpdate(this)" />
@@ -154,10 +175,6 @@
                         <input class="input" type="text" id="inputSugarContent" name="sugarContent" placeholder="당도" onchange="graphUpdate(this)" />
                         <input class="input" type="text" id="inputAcidity" name="acidity" placeholder="산도" onchange="graphUpdate(this)" />
                     </div>
-                </div>
-                <div class="form-item">
-                    <label class="label">밸런스</label>
-                    <input class="input" type="text" id="inputBalance" name="balance" placeholder="밸런스" onchange="balanceUpdate(this)" />
                 </div>
                 <div class="form-item">
                     <label class="label">한줄평</label>

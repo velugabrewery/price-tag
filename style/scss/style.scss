@@ -182,6 +182,57 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
+  .balance-container {
+    display: none;
+    padding: 30px 60px 10px;
+    .title {
+      font-weight: 600;
+      font-size: 32px;
+    }
+    .graph-container {
+      display: flex;
+      flex: 1 1 0;
+      align-items: center;
+      margin-left: 30px;
+      .description {
+        font-size: 26px;
+        color: #495057;
+      }
+      .graph-wrap {
+        position: relative;
+        display: flex;
+        flex: 1 1 0;
+        height: 36px;
+        margin: 0 12px;
+        .graph-picker {
+          z-index: 1;
+          position: absolute;
+          left: -12px;
+          bottom: -6px;
+          width: 0;
+          height: 0;
+          border-left: 25px solid transparent;
+          border-right: 25px solid transparent;
+          border-bottom: 25px solid black;
+          transform: scaleX(0.5);
+          transform-origin: left;
+        }
+        .graph {
+          overflow: hidden;
+          display: flex;
+          flex: 1 1 0;
+          border-radius: 19px;
+          .graph-bg {
+            flex: 1 1 0;
+            background-color: #FF922B;
+            @for $i from 1 through 5 {
+              &.cell-#{$i} { opacity: $i*0.2; }
+            }
+          }
+        }
+      }
+    }
+  }
   .wine-palette {
     padding: 30px 60px 0;
     .graph-wrap {
@@ -196,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
         flex: 1 1 0;
         height: 36px;
-        margin-left: 35px;
+        margin-left: 30px;
         border-radius: 18px;
         background-color: #eee;
         .graph-bar {

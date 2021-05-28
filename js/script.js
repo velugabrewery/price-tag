@@ -111,10 +111,10 @@ function balanceUpdate(obj) {
   var val = obj.value;
   var result = obj.id.substring(5);
   result = result.charAt(0).toLowerCase() + result.substring(1);
-  // document.getElementById(result).style.transform = 'rotate(' + ((val - 1) * 36 - 72) + 'deg)';
+  document.getElementById(result).style.marginLeft = (val - 1) * 20 + 10 + '%';
 
   if (val != '') {
-    document.getElementById('viewBalance').style.display = 'block';
+    document.getElementById('viewBalance').style.display = 'flex';
   }
   else {
     document.getElementById('viewBalance').style.display = 'none';

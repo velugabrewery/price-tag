@@ -156,6 +156,69 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-size: 32px;
 }
+.price-tag .balance-container {
+  display: none;
+  padding: 30px 60px 10px;
+}
+.price-tag .balance-container .title {
+  font-weight: 600;
+  font-size: 32px;
+}
+.price-tag .balance-container .graph-container {
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  margin-left: 30px;
+}
+.price-tag .balance-container .graph-container .description {
+  font-size: 26px;
+  color: #495057;
+}
+.price-tag .balance-container .graph-container .graph-wrap {
+  position: relative;
+  display: flex;
+  flex: 1 1 0;
+  height: 36px;
+  margin: 0 12px;
+}
+.price-tag .balance-container .graph-container .graph-wrap .graph-picker {
+  z-index: 1;
+  position: absolute;
+  left: -12px;
+  bottom: -6px;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid black;
+  transform: scaleX(0.5);
+  transform-origin: left;
+}
+.price-tag .balance-container .graph-container .graph-wrap .graph {
+  overflow: hidden;
+  display: flex;
+  flex: 1 1 0;
+  border-radius: 19px;
+}
+.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg {
+  flex: 1 1 0;
+  background-color: #FF922B;
+}
+.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-1 {
+  opacity: 0.2;
+}
+.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-2 {
+  opacity: 0.4;
+}
+.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-3 {
+  opacity: 0.6;
+}
+.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-4 {
+  opacity: 0.8;
+}
+.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-5 {
+  opacity: 1;
+}
 .price-tag .wine-palette {
   padding: 30px 60px 0;
 }
@@ -172,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   flex: 1 1 0;
   height: 36px;
-  margin-left: 35px;
+  margin-left: 30px;
   border-radius: 18px;
   background-color: #eee;
 }
