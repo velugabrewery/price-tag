@@ -81,6 +81,9 @@ h1, h2, h3, h4, h5, h6 {
 .price-tag .name-container .subtext-wrap {
   margin-top: 28px;
 }
+.price-tag .name-container .subtext-wrap #base {
+  display: none;
+}
 .price-tag .name-container .subtext-wrap .subtext {
   position: relative;
   font-weight: 700;

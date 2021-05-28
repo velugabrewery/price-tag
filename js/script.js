@@ -32,18 +32,25 @@ function textUpdate(obj) {
   }
 
   // 베이스 byte 체크
-  if (result = 'base') {
-    var byte = 0;
-    for (var i = 0; i < val.length; i++) {
-      (val.charCodeAt(i) > 127) ? byte += 2 : byte++ ;
-    }
-    if (byte > 40) {
-      document.getElementById('lineBreak').style.display = 'block';
-      document.getElementById('lineCombine').style.display = 'none';
+  if (result == 'base') {
+    if (val != '') {
+      document.getElementById('base').style.display = 'inline-block';
+
+      var byte = 0;
+      for (var i = 0; i < val.length; i++) {
+        (val.charCodeAt(i) > 127) ? byte += 2 : byte++ ;
+      }
+      if (byte > 40) {
+        document.getElementById('lineBreak').style.display = 'block';
+        document.getElementById('lineCombine').style.display = 'none';
+      }
+      else {
+        document.getElementById('lineBreak').style.display = 'none';
+        document.getElementById('lineCombine').style.display = 'block';
+      }
     }
     else {
-      document.getElementById('lineBreak').style.display = 'none';
-      document.getElementById('lineCombine').style.display = 'block';
+      document.getElementById('base').style.display = 'none';
     }
   }
 
