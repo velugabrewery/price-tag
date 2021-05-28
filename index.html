@@ -105,6 +105,24 @@
                         </div>
                     </div>
                 </div>
+                <div id="sakeGraph" class="sake-graph pt-0">
+                    <div id="viewSakeMeterValue" class="graph-wrap">
+                        <span class="title">주도</span>
+                        <span class="description">스위트</span>
+                        <div class="graph">
+                            <div id="sakeMeterValue" class="graph-bar">0</div>
+                        </div>
+                        <span class="description">드라이</span>
+                    </div>
+                    <div id="viewSakeAcidity" class="graph-wrap">
+                        <span class="title">산도</span>
+                        <span class="description">담백</span>
+                        <div class="graph">
+                            <div id="sakeAcidity" class="graph-bar">1.35</div>
+                        </div>
+                        <span class="description">중후</span>
+                    </div>
+                </div>
 
                 <!-- <div id="viewBalance" class="balance-container">
                     <div class="title-wrap">
@@ -184,6 +202,13 @@
                         <input class="input" type="text" id="inputTannin" name="tannin" placeholder="타닌" onchange="graphUpdate(this)" />
                         <input class="input" type="text" id="inputSugarContent" name="sugarContent" placeholder="당도" onchange="graphUpdate(this)" />
                         <input class="input" type="text" id="inputAcidity" name="acidity" placeholder="산도" onchange="graphUpdate(this)" />
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="label">사케 주도/산도</label>
+                    <div class="input-wrap">
+                        <input class="input" type="text" id="inputSakeMeterValue" name="sakeMeterValue" placeholder="주도" onchange="sakeUpdate(this)" />
+                        <input class="input" type="text" id="inputSakeAcidity" name="sakeAcidity" placeholder="산도" onchange="sakeUpdate(this)" />
                     </div>
                 </div>
                 <div class="form-item">

@@ -160,6 +160,67 @@ function balanceUpdate(obj) {
 //   }
 // }
 
+// 사케 주도/산도
+function sakeUpdate(obj) {
+  var val = obj.value;
+  var result = obj.id.substring(5);
+  var viewInput = 'view' + result;
+
+  result = result.charAt(0).toLowerCase() + result.substring(1);
+  document.getElementById(result).innerHTML = val;
+
+  if (val != '') {
+    document.getElementById(viewInput).style.display = 'flex';
+  }
+  else {
+    document.getElementById(viewInput).style.display = 'none';
+  }
+
+  if (result === 'sakeMeterValue') {
+    // SMV
+    var valSign = val.charAt(0);
+    var valNum = val.substring(1) * 1;
+
+    if (valNum > 10) {
+      valNum = 40;
+    }
+    else {
+      valNum = valNum * 4;
+    }
+    val = valSign + valNum;
+    document.getElementById(result).style.marginLeft = 40 + val * 1 + '%';
+  }
+  else {
+    // sakeAcidity
+    if (val <= 0.7) {
+      val = 40;
+    }
+    else if (val >= 2) {
+      val = -40;
+    }
+    else {
+      val = (1.35 - val) * 40 / 65 * 100;
+    }
+    document.getElementById(result).style.marginLeft = 40 - Math.floor(val) + '%';
+  }
+
+  // 기본 패딩값으로 레이아웃 어그러지는거 해결
+  var arr = ['viewSakeMeterValue', 'viewSakeAcidity'];
+  var flexNumber = 0;
+  for (i = 0; i < arr.length; i++) {
+    if (document.getElementById(arr[i]).style.display != 'flex') {
+      flexNumber += 1;
+    }
+  }
+  
+  if (flexNumber == 2) {
+    document.getElementById('sakeGraph').classList.add('pt-0');
+  }
+  else {
+    document.getElementById('sakeGraph').classList.remove('pt-0');
+  }
+}
+
 // makeImage
 function makeImage(){
   domtoimage.toJpeg(document.getElementById('priceTag'), { width: 826 })
