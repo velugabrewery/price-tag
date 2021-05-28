@@ -27,6 +27,26 @@ function textUpdate(obj) {
   result = result.charAt(0).toLowerCase() + result.substring(1);
   document.getElementById(result).innerHTML = val;
   
+  if (document.getElementById(result + '2') != null) {
+    document.getElementById(result + '2').innerHTML = val;
+  }
+
+  // 베이스 byte 체크
+  if (result = 'base') {
+    var byte = 0;
+    for (var i = 0; i < val.length; i++) {
+      (val.charCodeAt(i) > 127) ? byte += 2 : byte++ ;
+    }
+    if (byte > 40) {
+      document.getElementById('lineBreak').style.display = 'block';
+      document.getElementById('lineCombine').style.display = 'none';
+    }
+    else {
+      document.getElementById('lineBreak').style.display = 'none';
+      document.getElementById('lineCombine').style.display = 'block';
+    }
+  }
+
   // 값이 없으면 숨김처리 input
   if (val != '') {
     document.getElementById(viewInput).style.display = 'flex';
@@ -36,6 +56,7 @@ function textUpdate(obj) {
     document.getElementById(viewInput).style.display = 'none';
   }
 
+  // 기본 패딩값으로 레이아웃 어그러지는거 해결
   var arr = ['viewColor', 'viewAroma'];
   var flexNumber = 0;
   for (i = 0; i < arr.length; i++) {
@@ -90,6 +111,7 @@ function graphUpdate(obj) {
     document.getElementById(viewGraph).style.display = 'none';
   }
 
+  // 기본 패딩값으로 레이아웃 어그러지는거 해결
   var arr = ['viewBody', 'viewTannin', 'viewSugarContent', 'viewAcidity'];
   var flexNumber = 0;
   for (i = 0; i < arr.length; i++) {
