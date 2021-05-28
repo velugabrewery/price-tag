@@ -59,6 +59,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: white;
 }
 .price-tag .comment {
+  display: none;
+  justify-content: center;
   padding: 45px 60px;
   text-align: center;
   color: white;
@@ -69,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 40px;
 }
 .price-tag .name-container {
-  padding: 40px 60px 25px;
+  padding: 50px 60px 0;
 }
 .price-tag .name-container .name {
   font-weight: 700;
@@ -105,11 +107,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 4px;
 }
 .price-tag .price-container {
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-bottom: 40px;
+  padding: 20px 60px 0;
 }
 .price-tag .price-container .price {
+  display: none;
   font-weight: 600;
   font-size: 32px;
   text-decoration: line-through;
@@ -119,6 +120,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 .price-tag .price-container .discount-price-wrap .percent {
+  display: none;
+  margin-right: 15px;
   font-weight: 700;
   font-size: 48px;
   line-height: 1.3em;
@@ -128,46 +131,44 @@ h1, h2, h3, h4, h5, h6 {
   content: "%";
 }
 .price-tag .price-container .discount-price-wrap .discount-price {
-  margin-left: 15px;
   font-weight: 700;
   font-size: 48px;
   line-height: 1.3em;
   color: #FF922B;
 }
-.price-tag .palette-container {
-  padding: 10px 60px 0;
-  padding-bottom: 40px;
+.price-tag .common-palette {
+  padding: 30px 60px 0;
 }
-.price-tag .palette-container .text-wrap {
+.price-tag .common-palette .text-wrap {
   display: none;
   align-items: center;
   margin: 4px 0;
 }
-.price-tag .palette-container .text-wrap .icon-wrap {
+.price-tag .common-palette .text-wrap .icon-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
 }
-.price-tag .palette-container .text-wrap .text {
+.price-tag .common-palette .text-wrap .text {
   margin-left: 20px;
   margin-bottom: 4px;
   font-weight: 600;
   font-size: 32px;
 }
-.price-tag .palette-container .wine-palette {
-  margin-top: 30px;
+.price-tag .wine-palette {
+  padding: 30px 60px 0;
 }
-.price-tag .palette-container .wine-palette .graph-wrap {
+.price-tag .wine-palette .graph-wrap {
   display: none;
   align-items: center;
 }
-.price-tag .palette-container .wine-palette .graph-wrap .title {
+.price-tag .wine-palette .graph-wrap .title {
   margin-bottom: 4px;
   font-weight: 600;
   font-size: 32px;
 }
-.price-tag .palette-container .wine-palette .graph-wrap .graph {
+.price-tag .wine-palette .graph-wrap .graph {
   position: relative;
   flex: 1 1 0;
   height: 36px;
@@ -175,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 18px;
   background-color: #eee;
 }
-.price-tag .palette-container .wine-palette .graph-wrap .graph .graph-bar {
+.price-tag .wine-palette .graph-wrap .graph .graph-bar {
   position: absolute;
   top: 0;
   width: 20%;
@@ -183,93 +184,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 18px;
   background-color: #FF922B;
 }
-.price-tag .palette-container .wine-palette .graph-wrap + .graph-wrap {
+.price-tag .wine-palette .graph-wrap + .graph-wrap {
   margin-top: 12px;
 }
-.price-tag .balance-container {
-  display: none;
-  padding: 15px 60px 55px;
+.price-tag .pt-0 {
+  padding-top: 0;
 }
-.price-tag .balance-container .title-wrap .title {
-  font-weight: 600;
-  font-size: 32px;
-}
-.price-tag .balance-container .title-wrap .subtitle {
-  font-weight: 700;
-  font-size: 24px;
-  color: #868E96;
-}
-.price-tag .balance-container .tachometer-container {
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  height: calc((826px - 70px * 2) / 2);
-  margin-top: 20px;
-}
-.price-tag .balance-container .tachometer-container .arrow {
-  z-index: 2;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.price-tag .balance-container .tachometer-container .arrow .circle {
-  z-index: 4;
-  position: absolute;
-  width: 55px;
+.price-tag .bumper {
   height: 55px;
-  border-radius: 50%;
-  background-color: #c4c4c4;
-}
-.price-tag .balance-container .tachometer-container .arrow .diamond {
-  z-index: 3;
-  width: calc(826px - 70px * 2);
-  height: calc(826px - 70px * 2);
-  border: 3px solid white;
-  background-color: #c4c4c4;
-  transform: scale(0.03, 0.7) rotate(45deg);
-}
-.price-tag .balance-container .tachometer-container .arrow .select {
-  z-index: 2;
-  position: absolute;
-}
-.price-tag .balance-container .tachometer-container .arrow .select path {
-  fill: #FF922B;
-}
-.price-tag .balance-container .tachometer-container .divider {
-  z-index: 1;
-  position: absolute;
-  width: calc(826px - 70px * 2);
-  height: calc(826px - 70px * 2);
-}
-.price-tag .balance-container .tachometer-container .divider path {
-  fill: #f1f4f5;
-}
-.price-tag .balance-container .tachometer-container .divider.divider-1 {
-  transform: rotate(-36deg);
-}
-.price-tag .balance-container .tachometer-container .divider.divider-2 {
-  transform: rotate(36deg);
-}
-.price-tag .balance-container .tachometer-container .text-wrap {
-  position: absolute;
-  top: calc((826px - 120px * 2) / 2);
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-.price-tag .balance-container .tachometer-container .text-wrap .text {
-  margin: 0 60px;
-  font-weight: 600;
-  font-size: 32px;
-  color: #868E96;
-}
-.price-tag .balance-container .tachometer-container .graph {
-  width: calc(826px - 70px * 2);
-  height: calc(826px - 70px * 2);
-  border: 30px solid #DEE4E6;
-  border-radius: 50%;
 }
 
 .form-container {

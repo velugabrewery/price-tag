@@ -85,6 +85,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #ccc;
   background-color: white;
   .comment {
+    display: none;
+    justify-content: center;
     padding: 45px 60px;
     text-align: center;
     color: white;
@@ -95,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
   .name-container {
-    padding: 40px 60px 25px;
+    padding: 50px 60px 0;
     .name {
       font-weight: 700;
       font-size: 56px;
@@ -131,10 +133,9 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
   .price-container {
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-bottom: 40px;
+    padding: 20px 60px 0;
     .price {
+      display: none;
       font-weight: 600;
       font-size: 32px;
       text-decoration:line-through;
@@ -143,6 +144,8 @@ h1, h2, h3, h4, h5, h6 {
     .discount-price-wrap {
       display: flex;
       .percent {
+        display: none;
+        margin-right: 15px;
         font-weight: 700;
         font-size: 48px;
         line-height: 1.3em;
@@ -152,7 +155,6 @@ h1, h2, h3, h4, h5, h6 {
         }
       }
       .discount-price {
-        margin-left: 15px;
         font-weight: 700;
         font-size: 48px;
         line-height: 1.3em;
@@ -160,9 +162,8 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
-  .palette-container {
-    padding: 10px 60px 0;
-    padding-bottom: 40px;
+  .common-palette {
+    padding: 30px 60px 0;
     .text-wrap {
       display: none;
       align-items: center;
@@ -180,121 +181,127 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 32px;
       }
     }
-    .wine-palette {
-      margin-top: 30px;
-      .graph-wrap {
-        display: none;
-        align-items: center;
-        .title {
-          margin-bottom: 4px;
-          font-weight: 600;
-          font-size: 32px;
-        }
-        .graph {
-          position: relative;
-          flex: 1 1 0;
-          height: 36px;
-          margin-left: 35px;
-          border-radius: 18px;
-          background-color: #eee;
-          .graph-bar {
-            position: absolute;
-            top: 0;
-            width: 20%;
-            height: 36px;
-            border-radius: 18px;
-            background-color: #FF922B;
-          }
-        }
-      }
-      .graph-wrap + .graph-wrap {
-        margin-top: 12px;
-      }
-    }
   }
-  .balance-container {
-    display: none;
-    padding: 15px 60px 55px;
-    .title-wrap {
+  .wine-palette {
+    padding: 30px 60px 0;
+    .graph-wrap {
+      display: none;
+      align-items: center;
       .title {
+        margin-bottom: 4px;
         font-weight: 600;
         font-size: 32px;
       }
-      .subtitle {
-        font-weight: 700;
-        font-size: 24px;
-        color: #868E96;
+      .graph {
+        position: relative;
+        flex: 1 1 0;
+        height: 36px;
+        margin-left: 35px;
+        border-radius: 18px;
+        background-color: #eee;
+        .graph-bar {
+          position: absolute;
+          top: 0;
+          width: 20%;
+          height: 36px;
+          border-radius: 18px;
+          background-color: #FF922B;
+        }
       }
     }
-    .tachometer-container {
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      height: calc((826px - 70px * 2) / 2);
-      margin-top: 20px;
-      .arrow {
-        z-index: 2;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .circle {
-          z-index: 4;
-          position: absolute;
-          width: 55px;
-          height: 55px;
-          border-radius: 50%;
-          background-color: #c4c4c4;
-        }
-        .diamond {
-          z-index: 3;
-          width: calc(826px - 70px * 2);
-          height: calc(826px - 70px * 2);
-          border: 3px solid white;
-          background-color: #c4c4c4;
-          transform: scale(0.03, 0.7) rotate(45deg);
-        }
-        .select {
-          z-index: 2;
-          position: absolute;
-          path {
-            fill: #FF922B;
-          }
-        }
-      }
-      .divider {
-        z-index: 1;
-        position: absolute;
-        width: calc(826px - 70px * 2);
-        height: calc(826px - 70px * 2);
-        path {
-          fill: #f1f4f5;
-        }
-        &.divider-1 { transform: rotate(-36deg); }
-        &.divider-2 { transform: rotate(36deg); }
-      }
-      .text-wrap {
-        position: absolute;
-        top: calc((826px - 120px * 2) / 2);
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        .text {
-          margin: 0 60px;
-          font-weight: 600;
-          font-size: 32px;
-          color: #868E96;
-        }
-      }
-      .graph {
-        width: calc(826px - 70px * 2);
-        height: calc(826px - 70px * 2);
-        border: 30px solid #DEE4E6;
-        border-radius: 50%;
-      }
+    .graph-wrap + .graph-wrap {
+      margin-top: 12px;
     }
   }
+  .pt-0 {
+    padding-top: 0;
+  }
+  .bumper {
+    height: 55px;
+  }
+  // .balance-container {
+  //   display: none;
+  //   padding: 15px 60px 55px;
+  //   .title-wrap {
+  //     .title {
+  //       font-weight: 600;
+  //       font-size: 32px;
+  //     }
+  //     .subtitle {
+  //       font-weight: 700;
+  //       font-size: 24px;
+  //       color: #868E96;
+  //     }
+  //   }
+  //   .tachometer-container {
+  //     overflow: hidden;
+  //     position: relative;
+  //     display: flex;
+  //     justify-content: center;
+  //     height: calc((826px - 70px * 2) / 2);
+  //     margin-top: 20px;
+  //     .arrow {
+  //       z-index: 2;
+  //       position: absolute;
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       .circle {
+  //         z-index: 4;
+  //         position: absolute;
+  //         width: 55px;
+  //         height: 55px;
+  //         border-radius: 50%;
+  //         background-color: #c4c4c4;
+  //       }
+  //       .diamond {
+  //         z-index: 3;
+  //         width: calc(826px - 70px * 2);
+  //         height: calc(826px - 70px * 2);
+  //         border: 3px solid white;
+  //         background-color: #c4c4c4;
+  //         transform: scale(0.03, 0.7) rotate(45deg);
+  //       }
+  //       .select {
+  //         z-index: 2;
+  //         position: absolute;
+  //         path {
+  //           fill: #FF922B;
+  //         }
+  //       }
+  //     }
+  //     .divider {
+  //       z-index: 1;
+  //       position: absolute;
+  //       width: calc(826px - 70px * 2);
+  //       height: calc(826px - 70px * 2);
+  //       path {
+  //         fill: #f1f4f5;
+  //       }
+  //       &.divider-1 { transform: rotate(-36deg); }
+  //       &.divider-2 { transform: rotate(36deg); }
+  //     }
+  //     .text-wrap {
+  //       position: absolute;
+  //       top: calc((826px - 120px * 2) / 2);
+  //       display: flex;
+  //       width: 100%;
+  //       justify-content: space-between;
+  //       .text {
+  //         margin: 0 60px;
+  //         font-weight: 600;
+  //         font-size: 32px;
+  //         color: #868E96;
+  //       }
+  //     }
+  //     .graph {
+  //       width: calc(826px - 70px * 2);
+  //       height: calc(826px - 70px * 2);
+  //       border: 30px solid #DEE4E6;
+  //       border-radius: 50%;
+  //     }
+  //   }
+  // }
 }
 
 // Form

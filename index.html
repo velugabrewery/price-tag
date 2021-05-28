@@ -15,7 +15,7 @@
     <body>
         <div class="resize">
             <section id="priceTag" class="price-tag">
-                <div class="comment">
+                <div id="viewComment" class="comment">
                     <h2 id="comment" class="text">한국인 기호에 맞는 초깔끔한 맛</h2>
                 </div>
                 <div class="name-container">
@@ -23,8 +23,6 @@
                     <div class="subtext-wrap">
                         <span id="style" class="subtext">레드 와인</span>
                         <span id="origin" class="subtext">이탈리아, 아브루쪼</span>
-                    </div>
-                    <div class="subtext-wrap">
                         <span id="base" class="subtext">몬테풀치아노, 카베르네 소비뇽, 템프라니요</span>
                         <span id="volume" class="subtext volume">750</span>
                     </div>
@@ -36,7 +34,7 @@
                         <h2 id="discountPrice" class="discount-price">29,050</h2>
                     </div>
                 </div>
-                <div id="paletteContainer" class="palette-container" style="margin-top: -50px;">
+                <div id="commonPalette" class="common-palette pt-0">
                     <div id="viewColor" class="text-wrap">
                         <div class="icon-wrap">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
@@ -53,34 +51,35 @@
                         </div>
                         <span id="aroma" class="text">붉은 과일류, 베이비파우더, 바다 모래</span>
                     </div>
-                    <div id="winePalette" class="wine-palette" style="margin-top: 20px;">
-                        <div id="viewBody" class="graph-wrap">
-                            <span class="title">바디</span>
-                            <div class="graph">
-                                <div id="body" class="graph-bar"></div>
-                            </div>
+                </div>
+                <div id="winePalette" class="wine-palette pt-0">
+                    <div id="viewBody" class="graph-wrap">
+                        <span class="title">바디</span>
+                        <div class="graph">
+                            <div id="body" class="graph-bar"></div>
                         </div>
-                        <div id="viewTannin" class="graph-wrap">
-                            <span class="title">타닌</span>
-                            <div class="graph">
-                                <div id="tannin" class="graph-bar"></div>
-                            </div>
+                    </div>
+                    <div id="viewTannin" class="graph-wrap">
+                        <span class="title">타닌</span>
+                        <div class="graph">
+                            <div id="tannin" class="graph-bar"></div>
                         </div>
-                        <div id="viewSugarContent" class="graph-wrap">
-                            <span class="title">당도</span>
-                            <div class="graph">
-                                <div id="sugarContent" class="graph-bar"></div>
-                            </div>
+                    </div>
+                    <div id="viewSugarContent" class="graph-wrap">
+                        <span class="title">당도</span>
+                        <div class="graph">
+                            <div id="sugarContent" class="graph-bar"></div>
                         </div>
-                        <div id="viewAcidity" class="graph-wrap">
-                            <span class="title">산도</span>
-                            <div class="graph">
-                                <div id="acidity" class="graph-bar"></div>
-                            </div>
+                    </div>
+                    <div id="viewAcidity" class="graph-wrap">
+                        <span class="title">산도</span>
+                        <div class="graph">
+                            <div id="acidity" class="graph-bar"></div>
                         </div>
                     </div>
                 </div>
-                <div id="viewBalance" class="balance-container">
+
+                <!-- <div id="viewBalance" class="balance-container">
                     <div class="title-wrap">
                         <span class="title">밸런스</span>
                         <span class="subtitle">(알코올향)</span>
@@ -105,7 +104,8 @@
                         </div>
                         <div class="graph"></div>
                     </div>
-                </div>
+                </div> -->
+                <div class="bumper"></div>
             </section>
         </div>
         <section class="form-container">

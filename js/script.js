@@ -31,11 +31,9 @@ function textUpdate(obj) {
   if (val != '') {
     document.getElementById(viewInput).style.display = 'flex';
     document.getElementById(result).innerHTML = val;
-    document.getElementById('priceContainer').style.paddingBottom = '25px';
   }
   else {
     document.getElementById(viewInput).style.display = 'none';
-    document.getElementById('priceContainer').style.paddingBottom = '50px';
   }
 
   var arr = ['viewColor', 'viewAroma'];
@@ -47,12 +45,10 @@ function textUpdate(obj) {
   }
   
   if (flexNumber == 2) {
-    document.getElementById('paletteContainer').style.marginTop = '-30px';
-    document.getElementById('priceContainer').style.paddingBottom = '50px';
+    document.getElementById('commonPalette').classList.add('pt-0');
   }
   else {
-    document.getElementById('paletteContainer').style.marginTop = '0';
-    document.getElementById('priceContainer').style.paddingBottom = '25px';
+    document.getElementById('commonPalette').classList.remove('pt-0');
   }
 }
 
@@ -68,6 +64,15 @@ function discountUpdate(obj) {
   var price = discountPrice / (1-discountPercent/100);
   price = Math.floor(price/100) * 100;
   document.getElementById('price').innerHTML = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  if (discountPercent > 0) {
+    document.getElementById('discountPercent').style.display = 'inline-block';
+    document.getElementById('price').style.display = 'inline-block';
+  }
+  else {
+    document.getElementById('discountPercent').style.display = 'none';
+    document.getElementById('price').style.display = 'none';
+  }
 }
 
 // 그래프
@@ -94,10 +99,10 @@ function graphUpdate(obj) {
   }
   
   if (flexNumber == 4) {
-    document.getElementById('winePalette').style.marginTop = '20px';
+    document.getElementById('winePalette').classList.add('pt-0');
   }
   else {
-    document.getElementById('winePalette').style.marginTop = '30px';
+    document.getElementById('winePalette').classList.remove('pt-0');
   }
 }
 
@@ -106,19 +111,32 @@ function balanceUpdate(obj) {
   var val = obj.value;
   var result = obj.id.substring(5);
   result = result.charAt(0).toLowerCase() + result.substring(1);
-  document.getElementById(result).style.transform = 'rotate(' + ((val - 1) * 36 - 72) + 'deg)';
+  // document.getElementById(result).style.transform = 'rotate(' + ((val - 1) * 36 - 72) + 'deg)';
 
   if (val != '') {
     document.getElementById('viewBalance').style.display = 'block';
-    document.getElementById('priceContainer').style.paddingBottom = '25px';
-    document.getElementById('paletteContainer').style.paddingBottom = '25px';
   }
   else {
     document.getElementById('viewBalance').style.display = 'none';
-    document.getElementById('priceContainer').style.paddingBottom = '40px';
-    document.getElementById('paletteContainer').style.paddingBottom = '40px';
   }
 }
+// function balanceUpdate(obj) {
+//   var val = obj.value;
+//   var result = obj.id.substring(5);
+//   result = result.charAt(0).toLowerCase() + result.substring(1);
+//   document.getElementById(result).style.transform = 'rotate(' + ((val - 1) * 36 - 72) + 'deg)';
+
+//   if (val != '') {
+//     document.getElementById('viewBalance').style.display = 'block';
+//     // document.getElementById('priceContainer').style.paddingBottom = '25px';
+//     // document.getElementById('paletteContainer').style.paddingBottom = '25px';
+//   }
+//   else {
+//     document.getElementById('viewBalance').style.display = 'none';
+//     // document.getElementById('priceContainer').style.paddingBottom = '40px';
+//     // document.getElementById('paletteContainer').style.paddingBottom = '40px';
+//   }
+// }
 
 // makeImage
 function makeImage(){
