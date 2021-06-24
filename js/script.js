@@ -237,4 +237,14 @@ function makeImage(){
       link.href = dataUrl;
       link.click();
     }); 
-} 
+}
+
+// 일반적인 input
+function colorUpdate(obj) {
+  var val = obj.value;
+  
+  document.querySelector('.color').style.setProperty('--color', val);
+  const bgColors = [].slice.call(document.querySelectorAll('.bg-color'));
+
+  bgColors.forEach(bgColor => bgColor.style.setProperty('--bg-color', val));
+}

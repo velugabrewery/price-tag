@@ -41,7 +41,7 @@
                     <h2 id="price" class="price">41,500</h2>
                     <div class="discount-price-wrap">
                         <h2 id="discountPercent" class="percent">30</h2>
-                        <h2 id="discountPrice" class="discount-price">29,050</h2>
+                        <h2 id="discountPrice" class="discount-price color">29,050</h2>
                     </div>
                 </div>
                 <div id="commonPalette" class="common-palette pt-0">
@@ -69,11 +69,11 @@
                         <div class="graph-wrap">
                             <div id="balance" class="graph-picker"></div>
                             <div class="graph">
-                                <div class="graph-bg cell-1"></div>
-                                <div class="graph-bg cell-2"></div>
-                                <div class="graph-bg cell-3"></div>
-                                <div class="graph-bg cell-4"></div>
-                                <div class="graph-bg cell-5"></div>
+                                <div class="graph-bg cell-1 bg-color"></div>
+                                <div class="graph-bg cell-2 bg-color"></div>
+                                <div class="graph-bg cell-3 bg-color"></div>
+                                <div class="graph-bg cell-4 bg-color"></div>
+                                <div class="graph-bg cell-5 bg-color"></div>
                             </div>
                         </div>
                         <span class="description">강함</span>
@@ -83,25 +83,25 @@
                     <div id="viewBody" class="graph-wrap">
                         <span class="title">바디</span>
                         <div class="graph">
-                            <div id="body" class="graph-bar"></div>
+                            <div id="body" class="graph-bar bg-color"></div>
                         </div>
                     </div>
                     <div id="viewTannin" class="graph-wrap">
                         <span class="title">타닌</span>
                         <div class="graph">
-                            <div id="tannin" class="graph-bar"></div>
+                            <div id="tannin" class="graph-bar bg-color"></div>
                         </div>
                     </div>
                     <div id="viewSugarContent" class="graph-wrap">
                         <span class="title">당도</span>
                         <div class="graph">
-                            <div id="sugarContent" class="graph-bar"></div>
+                            <div id="sugarContent" class="graph-bar bg-color"></div>
                         </div>
                     </div>
                     <div id="viewAcidity" class="graph-wrap">
                         <span class="title">산도</span>
                         <div class="graph">
-                            <div id="acidity" class="graph-bar"></div>
+                            <div id="acidity" class="graph-bar bg-color"></div>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                         <span class="title">주도</span>
                         <span class="description">스위트</span>
                         <div class="graph">
-                            <div id="sakeMeterValue" class="graph-bar">0</div>
+                            <div id="sakeMeterValue" class="graph-bar bg-color">0</div>
                         </div>
                         <span class="description">드라이</span>
                     </div>
@@ -118,7 +118,7 @@
                         <span class="title">산도</span>
                         <span class="description">담백</span>
                         <div class="graph">
-                            <div id="sakeAcidity" class="graph-bar">1.35</div>
+                            <div id="sakeAcidity" class="graph-bar bg-color">1.35</div>
                         </div>
                         <span class="description">중후</span>
                     </div>
@@ -155,6 +155,10 @@
         </div>
         <section class="form-container">
             <form class="form">
+                <div class="form-item">
+                    <label class="label">색상</label>
+                    <input id="inputCssColor" name="cssColor" type="color" value="#FF922B" onchange="colorUpdate(this)" style="margin-top: 6px;">
+                </div>
                 <div class="form-item">
                     <label class="label">상품명</label>
                     <input class="input" type="text" id="inputProductName" name="product_name" placeholder="루나리아 코스테 디 모로 몬테풀치아노 디 아부르쪼" onchange="textUpdate(this)" />

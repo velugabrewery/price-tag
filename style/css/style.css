@@ -1,4 +1,9 @@
 @charset "UTF-8";
+:root {
+  --color: #FF922B;
+  --bg-color: #FF922B;
+}
+
 @font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
@@ -137,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: 48px;
   line-height: 1.3em;
-  color: #FF922B;
+  color: var(--color);
 }
 .price-tag .common-palette {
   padding: 30px 60px 0;
@@ -207,22 +212,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg {
   flex: 1 1 0;
-  background-color: #FF922B;
+  background-color: var(--bg-color);
 }
-.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-1 {
-  opacity: 0.2;
+.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-1, .price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-5 {
+  opacity: 0.3;
 }
-.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-2 {
-  opacity: 0.4;
-}
-.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-3 {
+.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-2, .price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-4 {
   opacity: 0.6;
-}
-.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-4 {
-  opacity: 0.8;
-}
-.price-tag .balance-container .graph-container .graph-wrap .graph .graph-bg.cell-5 {
-  opacity: 1;
 }
 .price-tag .wine-palette {
   padding: 30px 60px 0;
@@ -250,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 20%;
   height: 36px;
   border-radius: 18px;
-  background-color: #FF922B;
+  background-color: var(--bg-color);
 }
 .price-tag .wine-palette .graph-wrap + .graph-wrap {
   margin-top: 12px;
@@ -299,7 +295,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: 26px;
   color: white;
-  background-color: #FF922B;
+  background-color: var(--bg-color);
 }
 .price-tag .sake-graph .graph-wrap .graph + .description {
   text-align: left;

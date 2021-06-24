@@ -1,3 +1,8 @@
+:root {
+  --color: #FF922B;
+  --bg-color: #FF922B;
+}
+
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
@@ -161,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 700;
         font-size: 48px;
         line-height: 1.3em;
-        color: #FF922B;
+        color: var(--color);
       }
     }
   }
@@ -229,9 +234,14 @@ h1, h2, h3, h4, h5, h6 {
           border-radius: 19px;
           .graph-bg {
             flex: 1 1 0;
-            background-color: #FF922B;
-            @for $i from 1 through 5 {
-              &.cell-#{$i} { opacity: $i*0.2; }
+            background-color: var(--bg-color);
+            &.cell-1,
+            &.cell-5 {
+              opacity: 0.3;
+            }
+            &.cell-2,
+            &.cell-4 {
+              opacity: 0.6;
             }
           }
         }
@@ -261,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
           width: 20%;
           height: 36px;
           border-radius: 18px;
-          background-color: #FF922B;
+          background-color: var(--bg-color);
         }
       }
     }
@@ -310,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
           font-weight: 700;
           font-size: 26px;
           color: white;
-          background-color: #FF922B;
+          background-color: var(--bg-color);
         }
         & + .description {
           text-align: left;
