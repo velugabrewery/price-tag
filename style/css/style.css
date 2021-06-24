@@ -189,7 +189,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex: 1 1 0;
   height: 36px;
-  margin: 0 12px;
 }
 .price-tag .balance-container .graph-container .graph-wrap .graph-picker {
   z-index: 1;
